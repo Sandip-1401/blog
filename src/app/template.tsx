@@ -28,7 +28,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
     <div className="relative flex flex-col min-h-full">
       {/* [REAL-WORLD USE CASE #2: Route Transition Progress Bar] */}
       {/* Har route change pe ye naya mount hokar 0% -> 100% sweep karta hai */}
-      <div className="fixed top-0 left-0 right-0 z-[100] h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-emerald-400 animate-progress" />
+      <div className="fixed top-0 left-0 right-0 z-100 h-1 from-blue-500 via-indigo-500 to-emerald-400 animate-progress" />
 
       {/* [REAL-WORLD USE CASE #1: Live Analytics Card (Bottom-Right)] */}
       <div className="fixed bottom-6 right-6 z-40 max-w-sm rounded-xl border border-zinc-200/90 bg-white/95 p-4 shadow-xl backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-900/95">
