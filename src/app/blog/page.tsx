@@ -3,7 +3,7 @@ import { POSTS } from "@/data/posts";
 
 export default function BlogPage() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-16">
+    <main className="mx-auto max-w-6xl px-6 py-16">
       {/* Page Header */}
       <div className="border-b border-zinc-200 pb-8 dark:border-zinc-800">
         <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs font-medium text-zinc-600 shadow-xs dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">

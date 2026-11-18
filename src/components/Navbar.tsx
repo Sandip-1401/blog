@@ -12,13 +12,12 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const pathname = usePathname();
-  // Ye state layout.tsx ke andar hai, isliye navigation par PERSIST karegi (kabhi reset nahi hogi)
   const [layoutInput, setLayoutInput] = useState("");
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200/80 bg-white/80 backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-950/80">
-      <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-6">
-        {/* Brand / Logo */}
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-zinc-900 text-white font-mono text-sm font-bold shadow-xs transition-transform group-hover:scale-105 dark:bg-zinc-100 dark:text-zinc-900">
             DP
@@ -36,10 +35,8 @@ export default function Navbar() {
         {/* Navigation Links */}
         <nav className="flex items-center gap-1 sm:gap-2">
           {NAV_LINKS.map((link) => {
-            const isActive =
-              link.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(link.href);
+            
+            const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
 
             return (
               <Link
@@ -53,7 +50,7 @@ export default function Navbar() {
               >
                 {link.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-zinc-900 rounded-full dark:bg-zinc-100" />
+                  <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-zinc-900 rounded-full dark:bg-zinc-100" />
                 )}
               </Link>
             );
@@ -66,8 +63,8 @@ export default function Navbar() {
             type="text"
             value={layoutInput}
             onChange={(e) => setLayoutInput(e.target.value)}
-            placeholder="[Layout State] Type here... (Persists)"
-            className="w-48 rounded-md border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs text-zinc-800 placeholder:text-zinc-400 focus:border-zinc-500 focus:bg-white focus:outline-none dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
+            placeholder="Type here... (Persists)"
+            className="w-48 rounded-md border bg-zinc-50 px-2.5 py-1 text-xs text-zinc-800 focus:border-zinc-500 focus:outline-none dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
             title="Ye input layout.tsx me hai — page badalne par bhi iska text rahega!"
           />
         </div>

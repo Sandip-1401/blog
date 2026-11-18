@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-16">
+    <main className="mx-auto max-w-6xl px-6 py-16">
       <div className="max-w-2xl">
         <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl dark:text-zinc-50">
           About the Engineer

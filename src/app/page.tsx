@@ -3,14 +3,12 @@ import { POSTS } from "@/data/posts";
 
 export default function HomePage() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
-      {/* Badge */}
+    <main className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
       <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs font-medium text-zinc-600 shadow-xs dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
         <span className="flex h-2 w-2 rounded-full bg-blue-600" />
         Next.js 15+ App Router Architecture
       </div>
 
-      {/* Hero Header */}
       <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-50">
         Architecting Modern Web Apps with Precision.
       </h1>
@@ -20,7 +18,6 @@ export default function HomePage() {
         Router layouts and server rendering to full-stack production patterns.
       </p>
 
-      {/* Call to Actions */}
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <Link
           href="/blog"
@@ -36,7 +33,6 @@ export default function HomePage() {
         </Link>
       </div>
 
-      {/* Architecture Highlights */}
       <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
         <div className="rounded-xl border border-zinc-200/80 bg-white p-6 shadow-xs dark:border-zinc-800/80 dark:bg-zinc-900">
           <div className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
@@ -75,7 +71,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Recent Posts Section */}
       <section className="mt-16">
         <div className="flex items-center justify-between border-b border-zinc-200 pb-4 dark:border-zinc-800">
           <h2 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
